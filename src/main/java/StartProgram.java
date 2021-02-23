@@ -10,10 +10,11 @@ public class StartProgram {
     }
 
     public static void calculate() {
+        System.out.println("Калькулятор считает примеры формата: \na(операция)b \nгде а и b - целые числа (без точки)\n");
         System.out.println(" *Чтобы начать введи цифу 1 и нажми Enter\n *Если хочешь выйти введи любой символ и нажми Enter");
         Scanner reader = new Scanner(System.in);
         String openProgram = reader.nextLine();
-        System.out.println("Калькулятор считает примеры формата: \na(операция)b \nгде а и b - целые числа (без точки)");
+
         while (openProgram.equals("1")) {
             Scanner scanner = new Scanner(System.in);
 
@@ -23,7 +24,7 @@ public class StartProgram {
             if (new Scanner(input1).hasNextInt()) {
                 number1 = Integer.parseInt(input1);
             } else {
-                System.out.println("Первое число некоректно \nВведите коректное число\n");
+                System.out.println("Первое число некоректно \nПобробуй еще раз\n");
                 continue;
 
             }
@@ -34,7 +35,7 @@ public class StartProgram {
             if (new Scanner(input2).hasNextInt()) {
                 number2 = Integer.parseInt(input2);
             } else {
-                System.out.println("Второе число некоректно \nВведите числа еще раз\n");
+                System.out.println("Второе число некоректно \nПопробуй ввести числа еще раз\n");
                 continue;
             }
 
